@@ -14,10 +14,12 @@
     <h1>Testing JSP</h1>
     <p>
 
-        <%
-            for (int i=0; i<10; i++) {
-                out.println("<p>" + "Hello world! " + i + "</p>");
-            }
+        <%@ page import="logic.TestClass" %>
+
+        <% TestClass testClass = new TestClass(); %>
+
+        <%=
+            testClass.info()
         %>
 
     </p>

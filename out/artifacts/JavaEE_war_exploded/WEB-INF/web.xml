@@ -7,8 +7,16 @@
         <servlet-name>FirstServlet</servlet-name>
         <servlet-class>FirstServlet</servlet-class>
     </servlet>
-<servlet-mapping>
-    <servlet-name>FirstServlet</servlet-name>
-    <url-pattern>/hello-world</url-pattern>
-</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/hello-world</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>FirstJSP</servlet-name>
+        <jsp-file>/firstJSP.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FirstJSP</servlet-name>
+        <url-pattern>/hello-world-jsp</url-pattern>
+    </servlet-mapping>
 </web-app>
