@@ -13,15 +13,11 @@
 <body>
     <h1>Testing JSP</h1>
     <p>
-
-        <%@ page import="logic.TestClass" %>
-
-        <% TestClass testClass = new TestClass(); %>
-
-        <%=
-            testClass.info()
+        <%
+            String name = request.getParameter("name");
         %>
 
+        <%= "Hello, " + name %>
     </p>
 </body>
 </html>
