@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,5 +23,9 @@ public class FirstServlet extends HttpServlet {
         pw.println("<h1> Hello, " + name + " " + surname + " </h1>");
         pw.println("</html>");
 
+        //response.sendRedirect("/testJsp.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/testJsp.jsp");
+        dispatcher.forward(request, response);
     }
 }
+
